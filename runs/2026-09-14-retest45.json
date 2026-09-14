@@ -1,0 +1,311 @@
+{
+  "findings": [
+    {
+      "id": "ORG003-DATA-001",
+      "title": "Saved email contacts reload as blank",
+      "status": "FAIL",
+      "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+      "steps": [],
+      "responsive": [
+        {
+          "size": "360×800",
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
+        },
+        {
+          "size": "390×844",
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
+        },
+        {
+          "size": "768×1024",
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
+        },
+        {
+          "size": "1024×768",
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
+        },
+        {
+          "size": "1280×800",
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
+        },
+        {
+          "size": "1440×900",
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
+        }
+      ],
+      "evidence": [],
+      "evidencePublication": "WITHHELD_PRIVACY_REVIEW",
+      "limitations": "Evidence withheld pending explicit public-asset review. Private document captures, signed links and local paths are never copied automatically.",
+      "sourceRun": "2026-09-14-retest45",
+      "resultSource": "results.json"
+    },
+    {
+      "id": "ORG005-AUTH-001",
+      "title": "Password recovery reuses an invalid consumed token",
+      "status": "PARTIAL",
+      "summary": "Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent.",
+      "steps": [],
+      "responsive": [
+        {
+          "size": "360×800",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "390×844",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "768×1024",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "1024×768",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "1280×800",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "1440×900",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
+          "evidence": []
+        }
+      ],
+      "evidence": [],
+      "evidencePublication": "WITHHELD_PRIVACY_REVIEW",
+      "limitations": "New-password completion, subsequent login and consumed-link replay await user handoff. Evidence withheld pending explicit public-asset review. Private document captures, signed links and local paths are never copied automatically.",
+      "sourceRun": "2026-09-14-retest45",
+      "resultSource": "results.json"
+    },
+    {
+      "id": "ORG008-MEMBER-001",
+      "title": "Removed members cannot be re-invited through the normal form",
+      "status": "BLOCKED",
+      "summary": "Controlled PIT007 C1280 organization exposes the existing synthetic invitee membership. Removal and re-invitation were held pending requested action-time confirmation, because re-invitation restores organization access. No membership changed.",
+      "steps": [],
+      "responsive": [
+        {
+          "size": "360×800",
+          "status": "NOT RUN",
+          "summary": "No new per-size outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "390×844",
+          "status": "NOT RUN",
+          "summary": "No new per-size outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "768×1024",
+          "status": "NOT RUN",
+          "summary": "No new per-size outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "1024×768",
+          "status": "NOT RUN",
+          "summary": "No new per-size outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "1280×800",
+          "status": "NOT RUN",
+          "summary": "No new per-size outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "1440×900",
+          "status": "NOT RUN",
+          "summary": "No new per-size outcome supplied.",
+          "evidence": []
+        }
+      ],
+      "evidence": [],
+      "evidencePublication": "WITHHELD_PRIVACY_REVIEW",
+      "limitations": "Awaiting explicit approval to remove and re-invite PIT007 Invite Recipient; acceptance and cross-role access checks are not executed. Evidence withheld pending explicit public-asset review. Private document captures, signed links and local paths are never copied automatically.",
+      "sourceRun": "2026-09-14-retest45",
+      "resultSource": "results.json"
+    },
+    {
+      "id": "ORG018-GOV-001",
+      "title": "Governed actions lack a complete decision lifecycle",
+      "status": "FAIL",
+      "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+      "steps": [],
+      "responsive": [
+        {
+          "size": "360×800",
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
+        },
+        {
+          "size": "390×844",
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
+        },
+        {
+          "size": "768×1024",
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
+        },
+        {
+          "size": "1024×768",
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
+        },
+        {
+          "size": "1280×800",
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
+        },
+        {
+          "size": "1440×900",
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
+        }
+      ],
+      "evidence": [],
+      "evidencePublication": "WITHHELD_PRIVACY_REVIEW",
+      "limitations": "Second-actor approval/rejection and expiry not yet exercised. Evidence withheld pending explicit public-asset review. Private document captures, signed links and local paths are never copied automatically.",
+      "sourceRun": "2026-09-14-retest45",
+      "resultSource": "results.json"
+    },
+    {
+      "id": "ORG020-CAL-001",
+      "title": "Valid future event cannot be added",
+      "status": "FAIL",
+      "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+      "steps": [],
+      "responsive": [
+        {
+          "size": "360×800",
+          "status": "FAIL",
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
+        },
+        {
+          "size": "390×844",
+          "status": "FAIL",
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
+        },
+        {
+          "size": "768×1024",
+          "status": "FAIL",
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
+        },
+        {
+          "size": "1024×768",
+          "status": "FAIL",
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
+        },
+        {
+          "size": "1280×800",
+          "status": "FAIL",
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
+        },
+        {
+          "size": "1440×900",
+          "status": "FAIL",
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
+        }
+      ],
+      "evidence": [],
+      "evidencePublication": "WITHHELD_PRIVACY_REVIEW",
+      "limitations": "Evidence withheld pending explicit public-asset review. Private document captures, signed links and local paths are never copied automatically.",
+      "sourceRun": "2026-09-14-retest45",
+      "resultSource": "results.json"
+    },
+    {
+      "id": "ORG023-CLOSE-001",
+      "title": "Closure succeeds with pending governed actions",
+      "status": "BLOCKED",
+      "summary": "Inspected organization closure form and fresh pending governance state. Closing the established test organization would deactivate its context while other fixture memberships remain; no irreversible closure submitted.",
+      "steps": [],
+      "responsive": [
+        {
+          "size": "360×800",
+          "status": "NOT RUN",
+          "summary": "No new per-size outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "390×844",
+          "status": "NOT RUN",
+          "summary": "No new per-size outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "768×1024",
+          "status": "NOT RUN",
+          "summary": "No new per-size outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "1024×768",
+          "status": "NOT RUN",
+          "summary": "No new per-size outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "1280×800",
+          "status": "NOT RUN",
+          "summary": "No new per-size outcome supplied.",
+          "evidence": []
+        },
+        {
+          "size": "1440×900",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Inspected organization closure form and fresh pending governance state. Closing the established test organization would deactivate its context while other fixture memberships remain; no irreversible closure submitted. No independent per-size workflow acceptance outcome supplied.",
+          "evidence": []
+        }
+      ],
+      "evidence": [],
+      "evidencePublication": "WITHHELD_PRIVACY_REVIEW",
+      "limitations": "A disposable organization and action-time closure approval are required for the pending-obligation closure test; no closure pass is claimed. Evidence withheld pending explicit public-asset review. Private document captures, signed links and local paths are never copied automatically.",
+      "sourceRun": "2026-09-14-retest45",
+      "resultSource": "results.json"
+    }
+  ],
+  "browser": "Google Chrome",
+  "frontend": "https://planar-truck-361704.uc.r.appspot.com",
+  "api": "https://cicdevapi.uc.r.appspot.com",
+  "runId": "2026-09-14-retest45",
+  "state": "RETEST PARTIAL — all 45 dispositioned; incomplete workflows explicitly blocked or partial",
+  "updatedAt": "2026-09-14T07:08:29.535Z",
+  "scope": "Chrome-only targeted retest of the 45 originally unclosed critical/high defects. Dispositioned does not mean fully executed: blocked, partial and unexecuted viewport checks remain explicit. Historical campaign findings remain unchanged. Targeted PASS does not assert broader unexecuted lifecycle coverage."
+}
