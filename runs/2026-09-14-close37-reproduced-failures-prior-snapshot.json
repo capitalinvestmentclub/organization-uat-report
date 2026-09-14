@@ -28,17 +28,17 @@
       {
         "id": "ORG018-GOV-001",
         "classification": "PRODUCT_FIX_LOCAL_VERIFIED",
-        "summary": "Requester cancellation and inspectable detail branch PASS across six independent measured Chrome executions: original360 request plus five notes-only requests, reason/confirm, full reload and terminal cancelled cards with actor and matching decision reason, no Cancel control. Full original lifecycle finding remains PARTIAL: distinct authorized approve/reject, expiry outcomes, immutable history and notification verification unexecuted.",
-        "cloudRetestStatus": "PARTIAL"
+        "summary": "Changed behavior passed focused regression and real API-backed Chrome local checks at all six measured sizes.",
+        "cloudRetestStatus": "PENDING"
       },
       {
         "id": "ORG020-CAL-001",
         "classification": "TEST_INPUT_CORRECTED",
-        "summary": "Fresh native-input future events were created at360 and390 but entered local10:30 on2026-10-15 renders03:30AM, a seven-hour Phoenix offset. Original disabled-add symptom not reproduced after native commit; exact persisted/displayed time acceptance fails. Other four sizes NOT RUN pending repair.",
-        "cloudRetestStatus": "FAIL"
+        "summary": "Existing future-event workflow persists using the native date/time input correctly. No product calendar repair was required.",
+        "cloudRetestStatus": "PENDING"
       }
     ],
-    "updatedAt": "2026-09-14T21:24:37.042Z",
+    "updatedAt": "2026-09-14T20:51:26.656Z",
     "candidates": {
       "webapp": "b99da21cf757593a3f5419086022556b7965e9b3",
       "webapi": "f11aba9330b84ee98e0e7f3188a2442b928e4aad"
@@ -98,7 +98,7 @@
       "buildId": "yU2MSQuhYYpfh4uHJUpxd",
       "verifiedBy": "/root"
     },
-    "cloudRetestSummary": "Latest targeted batch 2026-09-14-close37-reproduced-failures: ORG018-GOV-001 PARTIAL, ORG020-CAL-001 FAIL. Other findings retain prior evidence; this is not full-scenario closure."
+    "cloudRetestSummary": "Latest targeted batch 2026-09-14-close37-org-contact-verified: ORG003-DATA-001 PASS. Other findings retain prior evidence; this is not full-scenario closure."
   },
   "findings": [
     {
@@ -366,314 +366,101 @@
     {
       "id": "ORG018-GOV-001",
       "title": "Governed actions lack a complete decision lifecycle",
-      "status": "PARTIAL",
-      "summary": "Requester cancellation and inspectable detail branch PASS across six independent measured Chrome executions: original360 request plus five notes-only requests, reason/confirm, full reload and terminal cancelled cards with actor and matching decision reason, no Cancel control. Full original lifecycle finding remains PARTIAL: distinct authorized approve/reject, expiry outcomes, immutable history and notification verification unexecuted.",
-      "steps": [
-        "Open pending request details.",
-        "Cancel request; enter decision reason; confirm.",
-        "Full reload and reopen Governance.",
-        "Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button."
-      ],
+      "status": "FAIL",
+      "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+      "steps": [],
       "responsive": [
         {
           "size": "360×800",
-          "measuredCss": "360x800",
-          "status": "PARTIAL",
-          "summary": "Open pending request details.; Cancel request; enter decision reason; confirm.; Full reload and reopen Governance.; Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button.. Cancelled by testaholica; Close37 360 synthetic request cancellation; no payout change. Original note and requested timestamp visible.",
-          "steps": [
-            "Open pending request details.",
-            "Cancel request; enter decision reason; confirm.",
-            "Full reload and reopen Governance.",
-            "Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-360x800.png",
-              "label": "ORG018-terminal-360x800"
-            }
-          ],
-          "observedAt": "2026-09-14T20:46:16.416Z",
-          "subchecks": {
-            "requesterCancellation": "PASS",
-            "detailReadback": "PASS",
-            "distinctApproval": "NOT RUN",
-            "distinctRejection": "NOT RUN",
-            "expiry": "NOT RUN",
-            "immutableHistoryAndNotifications": "NOT RUN"
-          }
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
         },
         {
           "size": "390×844",
-          "measuredCss": "390x844",
-          "status": "PARTIAL",
-          "summary": "Open pending request details.; Cancel request; enter decision reason; confirm.; Full reload and reopen Governance.; Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button.. Cancelled by testaholica; Close37 390 synthetic request cancellation; no payout change. Original note and requested timestamp visible.",
-          "steps": [
-            "Open pending request details.",
-            "Cancel request; enter decision reason; confirm.",
-            "Full reload and reopen Governance.",
-            "Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-390x844.png",
-              "label": "ORG018-terminal-390x844"
-            }
-          ],
-          "observedAt": "2026-09-14T20:46:16.416Z",
-          "subchecks": {
-            "requesterCancellation": "PASS",
-            "detailReadback": "PASS",
-            "distinctApproval": "NOT RUN",
-            "distinctRejection": "NOT RUN",
-            "expiry": "NOT RUN",
-            "immutableHistoryAndNotifications": "NOT RUN"
-          }
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
         },
         {
           "size": "768×1024",
-          "measuredCss": "768x1024",
-          "status": "PARTIAL",
-          "summary": "Open pending request details.; Cancel request; enter decision reason; confirm.; Full reload and reopen Governance.; Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button.. Cancelled by testaholica; Close37 768 synthetic request cancellation; no payout change. Original note and requested timestamp visible.",
-          "steps": [
-            "Open pending request details.",
-            "Cancel request; enter decision reason; confirm.",
-            "Full reload and reopen Governance.",
-            "Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-768x1024.png",
-              "label": "ORG018-terminal-768x1024"
-            }
-          ],
-          "observedAt": "2026-09-14T20:46:16.416Z",
-          "subchecks": {
-            "requesterCancellation": "PASS",
-            "detailReadback": "PASS",
-            "distinctApproval": "NOT RUN",
-            "distinctRejection": "NOT RUN",
-            "expiry": "NOT RUN",
-            "immutableHistoryAndNotifications": "NOT RUN"
-          }
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
         },
         {
           "size": "1024×768",
-          "measuredCss": "1024x768",
-          "status": "PARTIAL",
-          "summary": "Open pending request details.; Cancel request; enter decision reason; confirm.; Full reload and reopen Governance.; Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button.. Cancelled by testaholica; Close37 1024 synthetic request cancellation; no payout change. Original note and requested timestamp visible.",
-          "steps": [
-            "Open pending request details.",
-            "Cancel request; enter decision reason; confirm.",
-            "Full reload and reopen Governance.",
-            "Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-1024x768.png",
-              "label": "ORG018-terminal-1024x768"
-            }
-          ],
-          "observedAt": "2026-09-14T20:46:16.416Z",
-          "subchecks": {
-            "requesterCancellation": "PASS",
-            "detailReadback": "PASS",
-            "distinctApproval": "NOT RUN",
-            "distinctRejection": "NOT RUN",
-            "expiry": "NOT RUN",
-            "immutableHistoryAndNotifications": "NOT RUN"
-          }
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
         },
         {
           "size": "1280×800",
-          "measuredCss": "1280x800",
-          "status": "PARTIAL",
-          "summary": "Open pending request details.; Cancel request; enter decision reason; confirm.; Full reload and reopen Governance.; Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button.. Cancelled by testaholica; Close37 1280 synthetic request cancellation; no payout change. Original note and requested timestamp visible.",
-          "steps": [
-            "Open pending request details.",
-            "Cancel request; enter decision reason; confirm.",
-            "Full reload and reopen Governance.",
-            "Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-1280x800.png",
-              "label": "ORG018-terminal-1280x800"
-            }
-          ],
-          "observedAt": "2026-09-14T20:46:16.416Z",
-          "subchecks": {
-            "requesterCancellation": "PASS",
-            "detailReadback": "PASS",
-            "distinctApproval": "NOT RUN",
-            "distinctRejection": "NOT RUN",
-            "expiry": "NOT RUN",
-            "immutableHistoryAndNotifications": "NOT RUN"
-          }
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
         },
         {
           "size": "1440×900",
-          "measuredCss": "1440x900",
-          "status": "PARTIAL",
-          "summary": "Open pending request details.; Cancel request; enter decision reason; confirm.; Full reload and reopen Governance.; Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button.. Cancelled by testaholica; Close37 1440 synthetic request cancellation; no payout change. Original note and requested timestamp visible.",
-          "steps": [
-            "Open pending request details.",
-            "Cancel request; enter decision reason; confirm.",
-            "Full reload and reopen Governance.",
-            "Inspect terminal cancelled card, author, original approval note and matching decision reason; no Cancel button."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-1440x900.png",
-              "label": "ORG018-terminal-1440x900"
-            }
-          ],
-          "observedAt": "2026-09-14T20:46:16.416Z",
-          "subchecks": {
-            "requesterCancellation": "PASS",
-            "detailReadback": "PASS",
-            "distinctApproval": "NOT RUN",
-            "distinctRejection": "NOT RUN",
-            "expiry": "NOT RUN",
-            "immutableHistoryAndNotifications": "NOT RUN"
-          }
+          "status": "FAIL",
+          "summary": "A fresh synthetic payout-account-change governance request persisted as pending and awaits a second approver. Requester cannot inspect details or cancel it through the Governance panel; the only request control is disabled Waiting for approver. No real payout account data was changed.",
+          "evidence": []
         }
       ],
-      "evidence": [
-        {
-          "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-360x800.png",
-          "label": "ORG018-terminal-360x800"
-        },
-        {
-          "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-390x844.png",
-          "label": "ORG018-terminal-390x844"
-        },
-        {
-          "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-768x1024.png",
-          "label": "ORG018-terminal-768x1024"
-        },
-        {
-          "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-1024x768.png",
-          "label": "ORG018-terminal-1024x768"
-        },
-        {
-          "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-1280x800.png",
-          "label": "ORG018-terminal-1280x800"
-        },
-        {
-          "url": "assets/2026-09-14-close37-reproduced-failures/ORG018-terminal-1440x900.png",
-          "label": "ORG018-terminal-1440x900"
-        }
-      ],
-      "evidencePublication": "APPROVED_PUBLIC_EVIDENCE",
-      "limitations": "Fresh deployed evidence only. Unexecuted cells remain NOT RUN; local functional repairs are not deployed acceptance. Cancellation/details only; approve/reject/expiry/immutable history and notifications remain open.",
-      "sourceRun": "2026-09-14-close37-reproduced-failures",
+      "evidence": [],
+      "evidencePublication": "WITHHELD_PRIVACY_REVIEW",
+      "limitations": "Second-actor approval/rejection and expiry not yet exercised. Evidence withheld pending explicit public-asset review. Private document captures, signed links and local paths are never copied automatically.",
+      "sourceRun": "2026-09-14-retest45",
       "resultSource": "results.json"
     },
     {
       "id": "ORG020-CAL-001",
       "title": "Valid future event cannot be added",
       "status": "FAIL",
-      "summary": "Fresh native-input future events were created at360 and390 but entered local10:30 on2026-10-15 renders03:30AM, a seven-hour Phoenix offset. Original disabled-add symptom not reproduced after native commit; exact persisted/displayed time acceptance fails. Other four sizes NOT RUN pending repair.",
-      "steps": [
-        "Enter2026-10-15T10:30 with native keyboard commit.",
-        "Add Event enables; create independent event.",
-        "Observe event renders10/15/2026 03:30AM instead of10:30."
-      ],
+      "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+      "steps": [],
       "responsive": [
         {
           "size": "360×800",
-          "measuredCss": "360x800",
           "status": "FAIL",
-          "summary": "Enter2026-10-15T10:30 with native keyboard commit.; Add Event enables; create independent event.; Observe event renders10/15/2026 03:30AM instead of10:30.. Coordinator executed360; its created03:30AM event is also visible in390 before/after evidence.",
-          "steps": [
-            "Enter2026-10-15T10:30 with native keyboard commit.",
-            "Add Event enables; create independent event.",
-            "Observe event renders10/15/2026 03:30AM instead of10:30."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-reproduced-failures/ORG020-before-panel-390x844.png",
-              "label": "ORG020-before-panel-390x844"
-            },
-            {
-              "url": "assets/2026-09-14-close37-reproduced-failures/ORG020-after-panel-390x844.png",
-              "label": "ORG020-after-panel-390x844"
-            }
-          ],
-          "observedAt": "2026-09-14T20:35:56.786Z"
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
         },
         {
           "size": "390×844",
-          "measuredCss": "390x844",
           "status": "FAIL",
-          "summary": "Enter2026-10-15T10:30 with native keyboard commit.; Add Event enables; create independent event.; Observe event renders10/15/2026 03:30AM instead of10:30.. Before and after panel reviewed:10:30 input then03:30AM event.",
-          "steps": [
-            "Enter2026-10-15T10:30 with native keyboard commit.",
-            "Add Event enables; create independent event.",
-            "Observe event renders10/15/2026 03:30AM instead of10:30."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-reproduced-failures/ORG020-before-panel-390x844.png",
-              "label": "ORG020-before-panel-390x844"
-            },
-            {
-              "url": "assets/2026-09-14-close37-reproduced-failures/ORG020-after-panel-390x844.png",
-              "label": "ORG020-after-panel-390x844"
-            }
-          ],
-          "observedAt": "2026-09-14T20:35:56.786Z"
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
         },
         {
           "size": "768×1024",
-          "measuredCss": null,
-          "status": "NOT RUN",
-          "summary": "Not executed in this fresh cloud run; earlier evidence retained in immutable prior snapshot.",
-          "steps": [],
-          "evidence": [],
-          "observedAt": null
+          "status": "FAIL",
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
         },
         {
           "size": "1024×768",
-          "measuredCss": null,
-          "status": "NOT RUN",
-          "summary": "Not executed in this fresh cloud run; earlier evidence retained in immutable prior snapshot.",
-          "steps": [],
-          "evidence": [],
-          "observedAt": null
+          "status": "FAIL",
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
         },
         {
           "size": "1280×800",
-          "measuredCss": null,
-          "status": "NOT RUN",
-          "summary": "Not executed in this fresh cloud run; earlier evidence retained in immutable prior snapshot.",
-          "steps": [],
-          "evidence": [],
-          "observedAt": null
+          "status": "FAIL",
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
         },
         {
           "size": "1440×900",
-          "measuredCss": null,
-          "status": "NOT RUN",
-          "summary": "Not executed in this fresh cloud run; earlier evidence retained in immutable prior snapshot.",
-          "steps": [],
-          "evidence": [],
-          "observedAt": null
+          "status": "FAIL",
+          "summary": "Entered Retest45 future calendar event and valid future datetime 2026-10-15T10:30. Add Event remains disabled after blur and at every requested size. No event could be created.",
+          "evidence": []
         }
       ],
-      "evidence": [
-        {
-          "url": "assets/2026-09-14-close37-reproduced-failures/ORG020-before-panel-390x844.png",
-          "label": "ORG020-before-panel-390x844"
-        },
-        {
-          "url": "assets/2026-09-14-close37-reproduced-failures/ORG020-after-panel-390x844.png",
-          "label": "ORG020-after-panel-390x844"
-        }
-      ],
-      "evidencePublication": "APPROVED_PUBLIC_EVIDENCE",
-      "limitations": "Fresh deployed evidence only. Unexecuted cells remain NOT RUN; local functional repairs are not deployed acceptance. 360 execution was separate; its result is correlated in390 screenshot showing both created events. Other four sizes unexecuted.",
-      "sourceRun": "2026-09-14-close37-reproduced-failures",
+      "evidence": [],
+      "evidencePublication": "WITHHELD_PRIVACY_REVIEW",
+      "limitations": "Evidence withheld pending explicit public-asset review. Private document captures, signed links and local paths are never copied automatically.",
+      "sourceRun": "2026-09-14-retest45",
       "resultSource": "results.json"
     },
     {
@@ -730,8 +517,8 @@
   "browser": "Google Chrome",
   "frontend": "https://planar-truck-361704.uc.r.appspot.com",
   "api": "https://cicdevapi.uc.r.appspot.com",
-  "runId": "2026-09-14-close37-reproduced-failures",
+  "runId": "2026-09-14-close37-org-contact-verified",
   "state": "RETEST PARTIAL — completed targeted batch published; remaining findings retain their latest recorded outcomes",
-  "updatedAt": "2026-09-14T21:24:37.042Z",
+  "updatedAt": "2026-09-14T20:51:26.656Z",
   "scope": "Chrome-only targeted defect acceptance on the recorded deployed versions. New results are limited to explicitly supplied findings and six measured CSS sizes. Historical scenarios and unexecuted lifecycle branches are not promoted to PASS."
 }
