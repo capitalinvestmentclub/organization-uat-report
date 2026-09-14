@@ -1,8 +1,9 @@
 {
   "repairBatch": {
-    "runId": "2026-09-14-merged-deployed-repair",
-    "state": "MERGED AND LIVE — targeted cloud verification progressing",
-    "executionMode": "cloud",
+    "runId": "2026-09-14-close37-pr-open",
+    "updatedAt": "2026-09-14T22:22:50.688Z",
+    "state": "PRs OPEN — checks pending; new fixes not merged or live",
+    "executionMode": "delivery-metadata-only",
     "browser": "Google Chrome",
     "sizes": [
       "360×800",
@@ -12,93 +13,38 @@
       "1280×800",
       "1440×900"
     ],
-    "mergeStatus": "MERGED",
-    "deploymentStatus": "LIVE",
-    "cloudRetestStatus": "PARTIAL",
-    "frontendTests": "Final candidate: 632 suites / 4,943 tests passed; production build passed. Final original-refund real-API Chrome check passed at all six exact sizes.",
-    "apiTests": "Prior complete reconciliation: 468 suites / 5,565 assertions passed; latest API base and refund delta: 5 suites / 82 assertions passed. Separate runs, not one new full-suite execution.",
-    "scope": "Readiness update only. Existing deployed findings and per-size results below remain the last published cloud outcomes until exact-release browser retesting is supplied.",
-    "findings": [
-      {
-        "id": "ORG003-DATA-001",
-        "classification": "PRODUCT_FIX_CLOUD_VERIFIED",
-        "summary": "Targeted saved-email defect PASS: six distinct measured Chrome UI Save contacts/full reload round-trips preserved per-size labels and nonblank primary email. Exact email is visually readable at390/768/1024 and1440 prefix+suffix; narrow read-only original-record correlation confirms unchanged exact email and final1440 label. Standard ellipsis at360/1280 is presentation, not lost data. Shared-record correlation supplements actual six UI executions, not a substitute.",
-        "cloudRetestStatus": "PASS"
-      },
-      {
-        "id": "ORG018-GOV-001",
-        "classification": "PRODUCT_FIX_LOCAL_VERIFIED",
-        "summary": "Requester cancellation and inspectable detail branch PASS across six independent measured Chrome executions: original360 request plus five notes-only requests, reason/confirm, full reload and terminal cancelled cards with actor and matching decision reason, no Cancel control. Full original lifecycle finding remains PARTIAL: distinct authorized approve/reject, expiry outcomes, immutable history and notification verification unexecuted.",
-        "cloudRetestStatus": "PARTIAL"
-      },
-      {
-        "id": "ORG020-CAL-001",
-        "classification": "TEST_INPUT_CORRECTED",
-        "summary": "Fresh native-input future events were created at360 and390 but entered local10:30 on2026-10-15 renders03:30AM, a seven-hour Phoenix offset. Original disabled-add symptom not reproduced after native commit; exact persisted/displayed time acceptance fails. Other four sizes NOT RUN pending repair.",
-        "cloudRetestStatus": "FAIL"
-      }
-    ],
-    "updatedAt": "2026-09-14T21:24:37.042Z",
+    "mergeStatus": "OPEN — CHECKS PENDING",
+    "deploymentStatus": "STAGE ONLY — promotion held",
+    "cloudRetestStatus": "FAIL — latest acceptance unchanged; new-release retest pending",
+    "scope": "Five findings, three shared causes: mobile grant Actions, grant receipt recipient, organization calendar timezone. Code delivery is separate from deployed acceptance; no finding status or viewport result changed.",
+    "releaseGate": "Frontend PR2346 and API PR738 are open. Development environments stage-only; no verified new live promotion. User deferred visual retest for merging only. Local functional checks and partial automated-suite progress are not deployed closure.",
     "candidates": {
-      "webapp": "b99da21cf757593a3f5419086022556b7965e9b3",
-      "webapi": "f11aba9330b84ee98e0e7f3188a2442b928e4aad"
+      "webapp": "f6e0fb4c345658bd12011516d67b95ba2421d393",
+      "webapi": "ca0a009a9273bacdb5d740ddfc449eb70faf5c63"
     },
     "pullRequests": [
       {
-        "url": "https://github.com/capitalinvestmentclub/webapp/pull/2342",
-        "label": "Frontend PR #2342 — merged"
+        "url": "https://github.com/capitalinvestmentclub/webapp/pull/2346",
+        "label": "Frontend PR #2346 — OPEN; checks pending"
       },
       {
-        "url": "https://github.com/capitalinvestmentclub/webapi/pull/737",
-        "label": "API PR #737 — merged after review corrections"
-      },
-      {
-        "url": "https://github.com/capitalinvestmentclub/webapp/actions/runs/34880983295",
-        "label": "Frontend live promotion — success"
-      },
-      {
-        "url": "https://github.com/capitalinvestmentclub/webapi/actions/runs/34880842679",
-        "label": "API live promotion — success"
+        "url": "https://github.com/capitalinvestmentclub/webapi/pull/738",
+        "label": "API PR #738 — OPEN; checks pending"
       }
     ],
-    "releaseGate": "Recorded merge commits are live. Cloud closure below is limited to explicit targeted results with six measured CSS viewport outcomes; merged code alone never closes other findings.",
-    "mergeCommits": {
-      "webapp": "2a16bad104bdbd0c2319523ddc5f145af420c1d4",
-      "webapi": "a86720f026956fa9a9e76e3f4bb23e5e02af445d"
-    },
-    "stagedDeployments": {
-      "webapp": {
-        "version": "auth-34878846169-1",
-        "commit": "2a16bad104bdbd0c2319523ddc5f145af420c1d4",
-        "workflow": "34878846169",
-        "status": "SUCCESS"
-      },
-      "webapi": {
-        "version": "policy-34880209047-1",
-        "commit": "a86720f026956fa9a9e76e3f4bb23e5e02af445d",
-        "workflow": "34880209047",
-        "status": "SUCCESS",
-        "policyParityMatched": true
+    "deployments": {},
+    "frontendTests": "Local functional checks recorded separately; visual screenshot acceptance unavailable. Await final candidate CI evidence.",
+    "apiTests": "Coordinator checkpoint only:179 of471 suites,2424 assertions passed,zero failures at snapshot. Full run ongoing, not a completed suite.",
+    "findings": [
+      {
+        "id": "ORG020-CAL-001",
+        "status": "FAIL",
+        "classification": "PRODUCT_FIX_PR_OPEN",
+        "summary": "Repair submitted in the recorded pull requests. Latest cloud acceptance remains FAIL; exact-release visual retest pending.",
+        "cloudRetestStatus": "FAIL"
       }
-    },
-    "apiReviewDelta": "Final review corrections: 44 controller assertions and 66 organization assertions passed; three required API checks passed and zero unresolved review threads.",
-    "deployments": {
-      "webapp": {
-        "version": "auth-34878846169-1",
-        "commit": "2a16bad104bdbd0c2319523ddc5f145af420c1d4",
-        "promotionRun": "34880983295",
-        "status": "LIVE"
-      },
-      "webapi": {
-        "version": "policy-34880209047-1",
-        "commit": "a86720f026956fa9a9e76e3f4bb23e5e02af445d",
-        "promotionRun": "34880842679",
-        "status": "LIVE"
-      },
-      "buildId": "yU2MSQuhYYpfh4uHJUpxd",
-      "verifiedBy": "/root"
-    },
-    "cloudRetestSummary": "Latest targeted batch 2026-09-14-close37-reproduced-failures: ORG018-GOV-001 PARTIAL, ORG020-CAL-001 FAIL. Other findings retain prior evidence; this is not full-scenario closure."
+    ],
+    "previousBatchRunId": "2026-09-14-merged-deployed-repair"
   },
   "findings": [
     {
