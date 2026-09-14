@@ -1,8 +1,8 @@
 {
   "repairBatch": {
     "runId": "2026-09-14-merged-deployed-repair",
-    "state": "MERGED AND LIVE — targeted cloud verification progressing",
-    "executionMode": "cloud",
+    "state": "MERGED AND LIVE — one targeted cloud refund retest passed; remaining cloud retests pending",
+    "executionMode": "real-api-local",
     "browser": "Google Chrome",
     "sizes": [
       "360×800",
@@ -21,9 +21,9 @@
     "findings": [
       {
         "id": "ORG003-DATA-001",
-        "classification": "PRODUCT_FIX_CLOUD_VERIFIED",
-        "summary": "Targeted saved-email defect PASS: six distinct measured Chrome UI Save contacts/full reload round-trips preserved per-size labels and nonblank primary email. Exact email is visually readable at390/768/1024 and1440 prefix+suffix; narrow read-only original-record correlation confirms unchanged exact email and final1440 label. Standard ellipsis at360/1280 is presentation, not lost data. Shared-record correlation supplements actual six UI executions, not a substitute.",
-        "cloudRetestStatus": "PASS"
+        "classification": "TEST_OBSERVATION_CORRECTED",
+        "summary": "Existing contact value persists; corrected rendered inspection confirms it. No product contact-data repair was required.",
+        "cloudRetestStatus": "PENDING"
       },
       {
         "id": "ORG018-GOV-001",
@@ -38,7 +38,7 @@
         "cloudRetestStatus": "PENDING"
       }
     ],
-    "updatedAt": "2026-09-14T20:51:26.656Z",
+    "updatedAt": "2026-09-14T18:36:20.305Z",
     "candidates": {
       "webapp": "b99da21cf757593a3f5419086022556b7965e9b3",
       "webapi": "f11aba9330b84ee98e0e7f3188a2442b928e4aad"
@@ -61,7 +61,7 @@
         "label": "API live promotion — success"
       }
     ],
-    "releaseGate": "Recorded merge commits are live. Cloud closure below is limited to explicit targeted results with six measured CSS viewport outcomes; merged code alone never closes other findings.",
+    "releaseGate": "Both exact merge commits are promoted live; promotion workflows succeeded. User-authorized approval-only override was used after required checks and concrete review corrections passed. New Chrome cloud acceptance is limited to GRT020-BAL-001 at all six measured sizes. Other prior cloud results remain unchanged; merged code alone does not close their findings.",
     "mergeCommits": {
       "webapp": "2a16bad104bdbd0c2319523ddc5f145af420c1d4",
       "webapi": "a86720f026956fa9a9e76e3f4bb23e5e02af445d"
@@ -94,173 +94,59 @@
         "commit": "a86720f026956fa9a9e76e3f4bb23e5e02af445d",
         "promotionRun": "34880842679",
         "status": "LIVE"
-      },
-      "buildId": "yU2MSQuhYYpfh4uHJUpxd",
-      "verifiedBy": "/root"
+      }
     },
-    "cloudRetestSummary": "Latest targeted batch 2026-09-14-close37-org-contact-verified: ORG003-DATA-001 PASS. Other findings retain prior evidence; this is not full-scenario closure."
+    "cloudRetestSummary": "GRT020-BAL-001 PASS: original terminated grant shows its existing USD -1 refund, USD +1 contribution and zero available/current balance after reload. Six exact measured Chrome CSS viewports passed. No fresh financial transaction was executed; other cloud retests are pending."
   },
   "findings": [
     {
       "id": "ORG003-DATA-001",
       "title": "Saved email contacts reload as blank",
-      "status": "PASS",
-      "summary": "Targeted saved-email defect PASS: six distinct measured Chrome UI Save contacts/full reload round-trips preserved per-size labels and nonblank primary email. Exact email is visually readable at390/768/1024 and1440 prefix+suffix; narrow read-only original-record correlation confirms unchanged exact email and final1440 label. Standard ellipsis at360/1280 is presentation, not lost data. Shared-record correlation supplements actual six UI executions, not a substitute.",
-      "steps": [
-        "Save contacts with label Close37 primary 360 and existing primary email retained.",
-        "Full browser reload and reopen Contacts.",
-        "Correlate shared original persisted contact exact email, primary=true, and final1440 label after six saves.",
-        "Save contacts with label Close37 primary 390 and existing primary email retained.",
-        "Save contacts with label Close37 primary 768 and existing primary email retained.",
-        "One ERR_CONNECTION_CLOSED recovered by normal Reload; then verified loaded result.",
-        "Save contacts with label Close37 primary 1024 and existing primary email retained.",
-        "Save contacts with label Close37 primary 1280 and existing primary email retained.",
-        "Save contacts with label Close37 primary 1440 and existing primary email retained."
-      ],
+      "status": "FAIL",
+      "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+      "steps": [],
       "responsive": [
         {
           "size": "360×800",
-          "measuredCss": "360x800",
-          "status": "PASS",
-          "summary": "Save contacts with label Close37 primary 360 and existing primary email retained.; Full browser reload and reopen Contacts.; Correlate shared original persisted contact exact email, primary=true, and final1440 label after six saves.. PASS Nonblank saved email and retained label after local-size save/reload. Standard ellipsis allowed; exact value corroborated by other same-record UI readbacks and fresh narrow read-only persisted-record correlation.",
-          "steps": [
-            "Save contacts with label Close37 primary 360 and existing primary email retained.",
-            "Full browser reload and reopen Contacts.",
-            "Correlate shared original persisted contact exact email, primary=true, and final1440 label after six saves."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-360x800.png",
-              "label": "ORG003-panel-reloaded-360x800"
-            }
-          ],
-          "observedAt": "2026-09-14T20:35:56.760Z"
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
         },
         {
           "size": "390×844",
-          "measuredCss": "390x844",
-          "status": "PASS",
-          "summary": "Save contacts with label Close37 primary 390 and existing primary email retained.; Full browser reload and reopen Contacts.. PASS Exact email and new label visible after reload.",
-          "steps": [
-            "Save contacts with label Close37 primary 390 and existing primary email retained.",
-            "Full browser reload and reopen Contacts."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-390x844.png",
-              "label": "ORG003-panel-reloaded-390x844"
-            }
-          ],
-          "observedAt": "2026-09-14T20:35:56.760Z"
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
         },
         {
           "size": "768×1024",
-          "measuredCss": "768x1024",
-          "status": "PASS",
-          "summary": "Save contacts with label Close37 primary 768 and existing primary email retained.; Full browser reload and reopen Contacts.; One ERR_CONNECTION_CLOSED recovered by normal Reload; then verified loaded result.. PASS Exact email and new label visible after reload.",
-          "steps": [
-            "Save contacts with label Close37 primary 768 and existing primary email retained.",
-            "Full browser reload and reopen Contacts.",
-            "One ERR_CONNECTION_CLOSED recovered by normal Reload; then verified loaded result."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-768x1024.png",
-              "label": "ORG003-panel-reloaded-768x1024"
-            }
-          ],
-          "observedAt": "2026-09-14T20:35:56.760Z"
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
         },
         {
           "size": "1024×768",
-          "measuredCss": "1024x768",
-          "status": "PASS",
-          "summary": "Save contacts with label Close37 primary 1024 and existing primary email retained.; Full browser reload and reopen Contacts.. PASS Exact email and new label visible after reload.",
-          "steps": [
-            "Save contacts with label Close37 primary 1024 and existing primary email retained.",
-            "Full browser reload and reopen Contacts."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-1024x768.png",
-              "label": "ORG003-panel-reloaded-1024x768"
-            }
-          ],
-          "observedAt": "2026-09-14T20:35:56.760Z"
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
         },
         {
           "size": "1280×800",
-          "measuredCss": "1280x800",
-          "status": "PASS",
-          "summary": "Save contacts with label Close37 primary 1280 and existing primary email retained.; Full browser reload and reopen Contacts.; Correlate shared original persisted contact exact email, primary=true, and final1440 label after six saves.. PASS Nonblank saved email and retained label after local-size save/reload. Standard ellipsis allowed; exact value corroborated by other same-record UI readbacks and fresh narrow read-only persisted-record correlation.",
-          "steps": [
-            "Save contacts with label Close37 primary 1280 and existing primary email retained.",
-            "Full browser reload and reopen Contacts.",
-            "Correlate shared original persisted contact exact email, primary=true, and final1440 label after six saves."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-1280x800.png",
-              "label": "ORG003-panel-reloaded-1280x800"
-            }
-          ],
-          "observedAt": "2026-09-14T20:35:56.760Z"
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
         },
         {
           "size": "1440×900",
-          "measuredCss": "1440x900",
-          "status": "PASS",
-          "summary": "Save contacts with label Close37 primary 1440 and existing primary email retained.; Full browser reload and reopen Contacts.. PASS Original visible prefix plus native End suffix together establish the complete retained synthetic email.",
-          "steps": [
-            "Save contacts with label Close37 primary 1440 and existing primary email retained.",
-            "Full browser reload and reopen Contacts."
-          ],
-          "evidence": [
-            {
-              "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-1440x900.png",
-              "label": "ORG003-panel-reloaded-1440x900"
-            },
-            {
-              "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-end-panel-1440x900.png",
-              "label": "ORG003-end-panel-1440x900"
-            }
-          ],
-          "observedAt": "2026-09-14T20:35:56.760Z"
+          "status": "FAIL",
+          "summary": "Saved a controlled email contact on PIT007 Chrome C1280 20260911. After Save contacts and full reload, label Retest45 primary persists but email value is blank. Readback reproduced at all six sizes.",
+          "evidence": []
         }
       ],
-      "evidence": [
-        {
-          "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-360x800.png",
-          "label": "ORG003-panel-reloaded-360x800"
-        },
-        {
-          "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-390x844.png",
-          "label": "ORG003-panel-reloaded-390x844"
-        },
-        {
-          "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-768x1024.png",
-          "label": "ORG003-panel-reloaded-768x1024"
-        },
-        {
-          "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-1024x768.png",
-          "label": "ORG003-panel-reloaded-1024x768"
-        },
-        {
-          "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-1280x800.png",
-          "label": "ORG003-panel-reloaded-1280x800"
-        },
-        {
-          "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-panel-reloaded-1440x900.png",
-          "label": "ORG003-panel-reloaded-1440x900"
-        },
-        {
-          "url": "assets/2026-09-14-close37-org-contact-verified/ORG003-end-panel-1440x900.png",
-          "label": "ORG003-end-panel-1440x900"
-        }
-      ],
-      "evidencePublication": "APPROVED_PUBLIC_EVIDENCE",
-      "limitations": "Targeted saved-email persistence defect only, not full contact-management suite. Six measured UI save/reload round-trips; shared exact-value visual readback and narrow persisted-record correlation supplement, not replace, each viewport execution. Standard input ellipsis does not mean data loss. Other outcomes and history preserved.",
-      "sourceRun": "2026-09-14-close37-org-contact-verified",
+      "evidence": [],
+      "evidencePublication": "WITHHELD_PRIVACY_REVIEW",
+      "limitations": "Evidence withheld pending explicit public-asset review. Private document captures, signed links and local paths are never copied automatically.",
+      "sourceRun": "2026-09-14-retest45",
       "resultSource": "results.json"
     },
     {
@@ -517,8 +403,8 @@
   "browser": "Google Chrome",
   "frontend": "https://planar-truck-361704.uc.r.appspot.com",
   "api": "https://cicdevapi.uc.r.appspot.com",
-  "runId": "2026-09-14-close37-org-contact-verified",
-  "state": "RETEST PARTIAL — completed targeted batch published; remaining findings retain their latest recorded outcomes",
-  "updatedAt": "2026-09-14T20:51:26.656Z",
-  "scope": "Chrome-only targeted defect acceptance on the recorded deployed versions. New results are limited to explicitly supplied findings and six measured CSS sizes. Historical scenarios and unexecuted lifecycle branches are not promoted to PASS."
+  "runId": "2026-09-14-retest45",
+  "state": "RETEST PARTIAL — all 45 dispositioned; incomplete workflows explicitly blocked or partial",
+  "updatedAt": "2026-09-14T07:08:29.535Z",
+  "scope": "Chrome-only targeted retest of the 45 originally unclosed critical/high defects. Dispositioned does not mean fully executed: blocked, partial and unexecuted viewport checks remain explicit. Historical campaign findings remain unchanged. Targeted PASS does not assert broader unexecuted lifecycle coverage."
 }
