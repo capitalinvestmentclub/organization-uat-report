@@ -242,58 +242,52 @@
     {
       "id": "ORG005-AUTH-001",
       "title": "Password recovery reuses an invalid consumed token",
-      "status": "PASS",
-      "summary": "A fresh two-stage password-recovery chain produced a usable second-stage link. The reset form was complete at all six Chrome sizes, the new credential signed in successfully, and replaying the consumed link returned Invalid or expired. Organization membership remained available after login.",
-      "steps": [
-        "Requested a fresh recovery email for a disposable controlled organization member.",
-        "Consumed the first-stage link and then the newly issued second-stage link.",
-        "Completed the reset form at all six Chrome sizes and signed in with the new credential.",
-        "Replayed the consumed second-stage link and confirmed it was rejected as invalid or expired.",
-        "Opened Organizations and confirmed the member still had the expected active access."
-      ],
+      "status": "PARTIAL",
+      "summary": "Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent.",
+      "steps": [],
       "responsive": [
         {
           "size": "360×800",
-          "status": "PASS",
-          "summary": "The fresh reset form and its submission controls were usable at this Chrome size; the consumed-token replay remained rejected.",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
           "evidence": []
         },
         {
           "size": "390×844",
-          "status": "PASS",
-          "summary": "The fresh reset form and its submission controls were usable at this Chrome size; the consumed-token replay remained rejected.",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
           "evidence": []
         },
         {
           "size": "768×1024",
-          "status": "PASS",
-          "summary": "The fresh reset form and its submission controls were usable at this Chrome size; the consumed-token replay remained rejected.",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
           "evidence": []
         },
         {
           "size": "1024×768",
-          "status": "PASS",
-          "summary": "The fresh reset form and its submission controls were usable at this Chrome size; the consumed-token replay remained rejected.",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
           "evidence": []
         },
         {
           "size": "1280×800",
-          "status": "PASS",
-          "summary": "The fresh reset form and its submission controls were usable at this Chrome size; the consumed-token replay remained rejected.",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
           "evidence": []
         },
         {
           "size": "1440×900",
-          "status": "PASS",
-          "summary": "The fresh reset form and its submission controls were usable at this Chrome size; the consumed-token replay remained rejected.",
+          "status": "PARTIAL",
+          "summary": "Rendered state inspected: Fresh synthetic invitee recovery request delivered email. First confirmation sent a second magic link, which opened the Change your password form successfully at all six sizes. Password entry and submission handed to user; no credential changed by agent. No independent per-size workflow acceptance outcome supplied.",
           "evidence": []
         }
       ],
       "evidence": [],
       "evidencePublication": "WITHHELD_PRIVACY_REVIEW",
-      "limitations": "Credentials, mailbox content, MFA values, token URLs, and organization identifiers are withheld from the public report.",
-      "sourceRun": "2026-09-15-verify-eight-partials",
-      "resultSource": "Live Chrome verification on the deployed application"
+      "limitations": "New-password completion, subsequent login and consumed-link replay await user handoff. Evidence withheld pending explicit public-asset review. Private document captures, signed links and local paths are never copied automatically.",
+      "sourceRun": "2026-09-14-retest45",
+      "resultSource": "results.json"
     },
     {
       "id": "ORG008-MEMBER-001",
@@ -766,9 +760,8 @@
   "browser": "Google Chrome",
   "frontend": "https://planar-truck-361704.uc.r.appspot.com",
   "api": "https://cicdevapi.uc.r.appspot.com",
-  "runId": "2026-09-15-verify-eight-partials",
-  "state": "PARTIAL VERIFICATION — 8 CRITICAL FINDINGS",
-  "updatedAt": "2026-09-16T00:57:50Z",
-  "scope": "Fresh deployed Chrome verification of the eight findings that were previously PARTIAL. Exact six-size results are recorded where exercised; missing external prerequisites and reproduced failures remain explicit.",
-  "publicationNote": "This run preserves prior history and updates only the eight requested findings. Sensitive credentials, tokens, mailbox content, identity documents, signed URLs, and internal financial identifiers are withheld."
+  "runId": "2026-09-14-close37-calendar-functional-partial",
+  "state": "RETEST PARTIAL — completed targeted batch published; remaining findings retain their latest recorded outcomes",
+  "updatedAt": "2026-09-15T00:11:31.379Z",
+  "scope": "Chrome-only targeted defect acceptance on the recorded deployed versions. New results are limited to explicitly supplied findings and six measured CSS sizes. Historical scenarios and unexecuted lifecycle branches are not promoted to PASS."
 }
